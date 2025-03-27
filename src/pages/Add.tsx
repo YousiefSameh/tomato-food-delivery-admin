@@ -2,7 +2,7 @@ import { assets } from "@assets/assets";
 import useAdd from "@hooks/useAdd";
 
 const Add = () => {
-	const { image, onChangeHandler, onChangeFileHandler, SubmitHandler } =
+	const { data, image, onChangeHandler, onChangeFileHandler, SubmitHandler } =
 		useAdd();
 	return (
 		<div className="add text-[#6d6d6d] text-base">
@@ -38,6 +38,7 @@ const Add = () => {
 						onChange={onChangeHandler}
 						type="text"
 						name="name"
+						value={data.name}
 						className="p-2.5 border rounded-md"
 						placeholder="Write Product Name Here ..."
 						required
@@ -49,8 +50,9 @@ const Add = () => {
 				>
 					<p>Product Description</p>
 					<textarea
-						onChange={onChangeHandler}
 						name="description"
+						onChange={onChangeHandler}
+						value={data.description}
 						className="p-2.5 border rounded-md"
 						rows={6}
 						placeholder="Write Product Description Here ..."
@@ -60,8 +62,9 @@ const Add = () => {
 					<div className="add-category flex flex-col gap-2.5">
 						<p>Product Category</p>
 						<select
-							onChange={onChangeHandler}
 							name="category"
+							onChange={onChangeHandler}
+							value={data.category}
 							className="max-w-[120px] p-2.5 border rounded-md"
 						>
 							<option value="Salad">Salad</option>
@@ -77,8 +80,9 @@ const Add = () => {
 					<div className="add-price flex flex-col gap-2.5">
 						<p>Product Price</p>
 						<input
-							onChange={onChangeHandler}
 							type="number"
+							onChange={onChangeHandler}
+							value={data.price}
 							className="max-w-[120px] p-2.5 border rounded-md"
 							name="price"
 							placeholder="Write Product Price Here ..."

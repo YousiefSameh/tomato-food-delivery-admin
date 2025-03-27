@@ -65,7 +65,7 @@ const useAdd = () => {
     }
   };
   
-	return {image, setImage, onChangeHandler, onChangeFileHandler, SubmitHandler};
+	return {data, image, setImage, onChangeHandler, onChangeFileHandler, SubmitHandler};
 };
 
 export default useAdd;

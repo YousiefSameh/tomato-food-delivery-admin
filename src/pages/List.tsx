@@ -1,41 +1,7 @@
-import API from "@services/api.services";
-import { isAxiosError } from "axios";
-import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
-import { Food } from "@customTypes/index";
+import useList from "@hooks/useList";
 
 const List = () => {
-  const [list, setList] = useState<Food[]>([]);
-  const url = "http://localhost:4000";
-
-	const fetchList = async () => {
-		try {
-			const response = await API.get("/food");
-			setList(response.data.data);
-		} catch (error) {
-			if (isAxiosError(error)) {
-				toast.error("Error: " + error.response?.data.message);
-			} else {
-				toast.error("Unexpected Error!");
-			}
-		}
-	};
-
-  const removeFoodItem = async (id: string) => {
-    try {
-      const response = await API.post("/food/remove", { id });
-      await fetchList();
-      toast.success(response.data.message);
-    } catch (error) {
-      if (isAxiosError(error)) {
-        toast.error(error.response?.data.message);
-      }
-    }
-  }
-
-	useEffect(() => {
-		fetchList();
-	}, []);
+  const { list, url, removeFoodItem } = useList();
 	return (
 		<div className="list add flex flex-col gap-2.5">
       <table className="list-table w-full">
