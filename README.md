@@ -15,11 +15,11 @@ This repository contains the admin panel for the Tomato Food Delivery applicatio
 
 1. Clone the repository:
   ```bash
-  git clone https://github.com/YousiefSameh/food-delivery-admin.git
+  git clone https://github.com/YousiefSameh/tomato-food-delivery-admin.git
   ```
 2. Navigate to the project directory:
   ```bash
-  cd food-delivery-admin
+  cd tomato-food-delivery-admin
   ```
 3. Install dependencies:
   ```bash
