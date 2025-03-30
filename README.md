@@ -1,6 +1,6 @@
-# Admin Panel for Food Delivery App
+# Admin Panel for Tomato Food Delivery App
 
-This repository contains the admin panel for the Food Delivery application. The admin panel is used to manage restaurants, orders, users, and other administrative tasks.
+This repository contains the admin panel for the Tomato Food Delivery application. The admin panel is used to manage restaurants, orders, users, and other administrative tasks.
 
 ## Features
 
@@ -15,7 +15,7 @@ This repository contains the admin panel for the Food Delivery application. The 
 
 1. Clone the repository:
   ```bash
-  git clone https://github.com/yourusername/food-delivery-admin.git
+  git clone https://github.com/YousiefSameh/food-delivery-admin.git
   ```
 2. Navigate to the project directory:
   ```bash
@@ -30,9 +30,9 @@ This repository contains the admin panel for the Food Delivery application. The 
 
 1. Start the development server:
   ```bash
-  npm start
+  npm run dev
   ```
-2. Open your browser and navigate to `http://localhost:3000`.
+2. Open your browser and navigate to `http://localhost:5173`.
 
 ## Testing
 
@@ -49,7 +49,14 @@ To deploy the application, follow these steps:
   ```bash
   npm run build
   ```
-2. Deploy the contents of the `build` directory to your hosting provider.
+2. Deploy the contents of the `dist` directory to your hosting provider.
+
+## Tech Stack
+
+- **Framework**: Vite
+- **Frontend**: React.js with TypeScript
+- **State Management**: Redux
+- **HTTP Client**: Axios
 
 ## Contributing
 
