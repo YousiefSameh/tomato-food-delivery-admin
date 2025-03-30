@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# Admin Panel for Food Delivery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the admin panel for the Food Delivery application. The admin panel is used to manage restaurants, orders, users, and other administrative tasks.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Manage restaurants and menus
+- Track and update orders
+- User management
+- Analytics and reporting
+- Role-based access control
+- Real-time notifications for order updates
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone the repository:
+  ```bash
+  git clone https://github.com/yourusername/food-delivery-admin.git
+  ```
+2. Navigate to the project directory:
+  ```bash
+  cd food-delivery-admin
+  ```
+3. Install dependencies:
+  ```bash
+  npm install
+  ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Usage
+
+1. Start the development server:
+  ```bash
+  npm start
+  ```
+2. Open your browser and navigate to `http://localhost:3000`.
+
+## Testing
+
+Run the following command to execute the test suite:
+```bash
+npm test
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To deploy the application, follow these steps:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. Build the project:
+  ```bash
+  npm run build
+  ```
+2. Deploy the contents of the `build` directory to your hosting provider.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+  ```bash
+  git checkout -b feature-name
+  ```
+3. Commit your changes:
+  ```bash
+  git commit -m "Add feature-name"
+  ```
+4. Push to your branch:
+  ```bash
+  git push origin feature-name
+  ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For any inquiries, please contact [yousief.sameh@outlook.com].
+
+## Acknowledgments
+
+- Thanks to all contributors who have helped improve this project.
+- Special thanks to the open-source community for providing tools and libraries that made this project possible.
+- Inspired by modern food delivery systems and their administrative needs.
