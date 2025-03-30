@@ -21,6 +21,20 @@ const Orders = () => {
     }
   }
 
+  const statusHandler = async (event: React.ChangeEvent<HTMLSelectElement>, orderId: string) => {
+    const status = event.target.value
+    try {
+      const res = await API.post("/order/status", { orderId: orderId, status: status })
+      if (res.data.success) {
+        await fetchAllOrders();
+      }
+    } catch (error) {
+      if (isAxiosError(error)) {
+        toast.error(error.response?.data.message);
+      }
+    }
+  }
+
   useEffect(() => {
     fetchAllOrders();
   }, [])
@@ -51,7 +65,7 @@ const Orders = () => {
             </div>
             <p>Items: { order.items.length }</p>
             <p>${order.amount}.00</p>
-            <select name="" id="" className="border-none p-[5px] lg:p-3 outline-none rounded-sm text-[10px] lg:text-sm bg-[#ffe1e1] text-[#454545] transition-colors cursor-pointer hover:bg-tomato hover:text-white">
+            <select onChange={(event: React.ChangeEvent<HTMLSelectElement>) => statusHandler(event, order._id)} value={order.status} className="border-none p-[5px] lg:p-3 outline-none rounded-sm text-[10px] lg:text-sm bg-[#ffe1e1] text-[#454545] transition-colors cursor-pointer hover:bg-tomato hover:text-white">
               <option value="Food Processing">Food Processing</option>
               <option value="Out For Delivery">Out For Delivery</option>
               <option value="Delivered">Delivered</option>
