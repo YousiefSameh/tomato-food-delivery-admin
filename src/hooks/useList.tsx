@@ -6,7 +6,7 @@ import { Food } from "@customTypes/index";
 
 const useList = () => {
   const [list, setList] = useState<Food[]>([]);
-  const url = "http://localhost:4000";
+  const url = "https://tomato-food-delivery-backend-h5s0.onrender.com";
 
 	const fetchList = async () => {
 		try {
